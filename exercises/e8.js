@@ -6,6 +6,16 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+  let holder;
+  let planetGrabber = data.planets
+  .filter(function(planet) {
+    if (planet.moons != undefined) {
+      if (planet.moons.includes(moonName)) {
+        holder = planet.name;
+      }
+    }
+  });
+  return holder;
 }
 
 
