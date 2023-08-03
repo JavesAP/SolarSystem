@@ -6,11 +6,7 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
-  let asteroidNames = [];
-  let AsteroidGrabber = data.asteroids.filter(function(asteroid) {
-    asteroidNames.push(asteroid.name);
-  })
-  return asteroidNames;
+  return data.asteroids.map((asteroid) => asteroid.name )
 }
 
 

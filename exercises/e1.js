@@ -6,11 +6,7 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
-  let planets = [];
-  let planetGrabber = data.planets.filter(function(planet) {
-    planets.push(planet.name);
-  })
-  return planets;
+  return data.planets.map((planet) =>  planet.name );
 }
 
 

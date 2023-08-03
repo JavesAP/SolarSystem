@@ -6,13 +6,18 @@ import { data } from "../data/data";
 
 export function getPlanetsWithMassValue(data, number) {
   // Your code goes here...
-  let Mass = [];
+  
+  return data.planets
+  .filter((planet) => planet.mass.massValue >= number) 
+  .map((planet) => planet.name);
+  
+  /*let Mass = [];
   let planetGrabber = data.planets.filter(function(planet) {
     if (planet.mass.massValue >= number) {
       Mass.push(planet.name);
     }
   })
-  return Mass;
+  return Mass;*/
 }
 
 
